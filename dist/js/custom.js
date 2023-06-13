@@ -9,6 +9,7 @@ $('.owl-carousel').owlCarousel({
     smartSpeed:1350,
     margin: 40,
     dots:false,
+    autoHeight:true,
     responsive:{
         0:{
             items:2
