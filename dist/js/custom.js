@@ -1,34 +1,33 @@
 // Owl carould setup 
-
-$('.owl-carousel').owlCarousel({
+$('.ff').owlCarousel({
     items:1,
     loop:true,
-    margin:10,
+    // margin:10,
     nav:true,
-    stagePadding:30,
+    // stagePadding:30,
     smartSpeed:1350,
-    margin: 40,
+    
     dots:false,
     autoHeight:true,
     responsive:{
         0:{
-            items:2
+            items:1
         },
         600:{
-            items:3
+            items:2
         },
         1000:{
-            items:5
+            items:1
         }
     }
 })
 
 // end wol carusol setup 
 
-function singleGalleryCarousel () {
+
     
   
-      var $sync1 = $(".single-gallery-carousel-content-box"), // variable declaration
+      var $sync1 = $(".ff2"), // variable declaration
         //   $sync2 = $(".single-gallery-carousel-thumbnail-box"),
           flag = false,
           duration = 500;
@@ -36,10 +35,22 @@ function singleGalleryCarousel () {
           $sync1.owlCarousel({ //function for preview carousel
               items: 1,
               margin: 0,
-              nav: false,
+              nav: true,
               dots: false,
               touchDrag  : false,
               mouseDrag  : false,
+              Infinity:true,
+              responsive:{
+                0:{
+                    items:5
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
               
               
           })
@@ -118,5 +129,7 @@ function singleGalleryCarousel () {
         //       }
         //   });
     //   console.log('fired')
-  }
-  singleGalleryCarousel (); //FUNCTION CALLED HERE
+  
+  
+
+  
