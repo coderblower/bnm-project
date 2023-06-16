@@ -41,7 +41,7 @@ function singleGalleryCarousel () {
               touchDrag  : false,
               mouseDrag  : false,
               
-              
+               
           })
           .on('changed.owl.carousel', function (e) {
               //var currentItem = e.item.index;
