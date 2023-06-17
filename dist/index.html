@@ -31,8 +31,8 @@
                 <div class="header bg-slate-50">
                     <!-- logo&search&donate start -->
                     <div class=" max-w-[1200px] mx-auto grid grid-cols-2 py-3">
-                        <div class="head-left header-top flex flex-1  justify-around align-middle ">
-                            <div class="logo w-8 flex-1">
+                        <div class="head-left header-top flex flex-row justify-around align-middle ">
+                            <div class="logo  basis-1/3 ">
                                 <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img class="h-16" src="img/logo.png" alt=""></a>
                             </div>
                             <div class="title ">
@@ -68,24 +68,38 @@
                                 <!-- log end  -->
                                   <div>
                                     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow md:pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-                                        <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
-                                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
-                                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
-                                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+                                        <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
                                         <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                                          <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                                            <span>Dropdown</span>
-                                            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                          </button>
-                                          <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-10">
-                                            <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                                              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #1</a>
-                                              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
-                                              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
+                                            <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                                <span>About us</span>
+                                                <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                            </button>
+                                            <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-10">
+                                                <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                                                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#"> দলের গঠনতন্ত্র ও ঘোষণাপত্র</a>
+                                              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#"> লক্ষ্য ও উদ্দ্যেশ্য </a>
+                                              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">কেন্দ্রীয় আহব্বায়ক কমিটি</a>
+                                              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
                                             </div>
-                                          </div>
-                                        </div>  
-                                     
+                                        </div>
+                                    </div>  
+                                    
+                                  
+                                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                                        <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                            <span>Media</span>
+                                            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                        </button>
+                                            <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-10">
+                                                <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                                                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-center" href="#">News</a>
+                                              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-center" href="#">Press Release</a>
+                                              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-center" href="#">Photo/video</a>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-red-600 rounded-lg dark-mode:bg-red-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white hover:text-slate-500 text-white md:mt-0 md:ml-4 hover:text-slate-50 focus:text-slate-50 hover:bg-red-400 focus:bg-red-500 focus:outline-none focus:shadow-outline" href="#">Become A Member</a>
+                                                                                
                                       </nav>
                                   </div>
                             </div>
@@ -127,7 +141,7 @@
                 <div class="">
                     <div class="ff owl-carousel owl-theme ">
                         <div class="item ">
-                            <img src="//dummyimage.com/740x300/fff/aaa" class="" style="width: 100%;" alt="">
+                            <img src="img/banner1.jpg" class="" style="width: 100%;" alt="">
                         </div>
                         <div class="item ">
                             <img src="//dummyimage.com/740x300/fff/aaa" class="" style="width: 100%;" alt="">
@@ -159,21 +173,32 @@
                 <div class="max-w-[1200px] mx-auto">
                         <h2 class="text-center py-10 pb-10 text-6xl "> সংবাদ </h2>
                         <div class="grid gap-2 grid-cols-3 ">
-                            <div class="flex flex-col items-center text-center h-96  col-span-2 border-r-red-200 relative">
-                                <div class="flex flex-1 gap-10 justify-around items-center after:absolute after:h-5/6 after:w-[2px]  after:right-1 after:bg-slate-300">
-                                    <div class="flex-3">
-                                        <img src="//res.cloudinary.com/saiful/image/upload/q_54/v1686997980/bnm/6184_6049997382_a76840209a_b_1000_600_nofilter_gt9ubv.jpg" class="h-full" alt="">
+                            <div class="flex items-center text-center h-96  col-span-2 border-r-red-200 relative" style="flex-flow: row wrap;">
+                                <div class=" grid grid-cols-2 gap-10 after:absolute after:h-5/6 after:w-[2px]  after:right-1 after:bg-slate-300">
+                                    <div class="">
+                                        <img src="img/news/headnews.jpg" class=" rounded-lg" alt="">
                                     </div>
-                                    <div class="flex-2 pr-5">
-                                        <h2 class="text-4xl pb-6">Lorem ipsum dolor sit.</h2>
-                                        <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, asperiores?</p>
+                                    <div class="pr-5 basis-2/3 h-full">
+                                        <h2 class="text-3xl pb-6">জনগণতান্ত্রিক বাংলাদেশ প্রতিষ্ঠার পদক্ষেপ এবং বাংলাদেশ জাতীয়তাবাদী আন্দোলন।।</h2>
+                                        <span>এম. এন মোস্তফা নূর-এডভোকেট </span> <br><br>
+                                        <p class="text-justify pb-2">আমরা কি বিএনপিকে ভাংতে আরেকটি পরিবারতান্ত্রিক রাজনীতির সূচনা করেছি? নাকি আওয়ামীলীগের মতো আরেকটি কতৃত্ববাদী পরিবারতন্ত্র প্রতিষ্ঠার রাজনৈতিক দল প্রতিষ্ঠা করছি?? 
+                                            জেনে নিই--- একটু সময় দিয়ে.........।। 
+                                            
                                     </div>
                                 </div>
                                 
                             </div>
                             <div class="flex flex-col gap-4 w-full items-stretch flex-1">
-                                <div class="flex-1 basis-4 bg-slate-400 flex  flex-row w-full items-center justify-center text-center">hello </div>
-                                <div class="flex-1 bg-slate-400 flex fex-row w-full items-center justify-center text-center">hello </div>
+                                <div class="flex-1 basis-4 bg-slate-400 flex  flex-row w-full items-center justify-center text-center">
+                                    <div class="relative">
+                                        <img src="img/news/news2.jpeg" alt="">
+                                        <div class="absolute bottom-0 w-full bg-slate-200 bg-opacity-80 pt-2 z-10"> 
+                                            <h2 class="text-xl pb-1">বিএনপির বিকল্প হতে প্রস্তুত হচ্ছে বি এন এম </h2>
+                                            <p>জাতীয় নির্বাচনকে সামনে রেখে বিএনপির বিকল্প হওয়ার ... </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-1 bg-slate-400 flex fex-row w-full items-center justify-center text-center"> </div>
                                 
                                 
                             <div></div>
@@ -199,10 +224,32 @@
 
 
                       <section class="">
-                        <div class="flex flex-wrap justify-around gap-10">
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg  basis-28 md:basis-auto">
+                        <div class="flex flex-wrap justify-center gap-6">
+                            <div class="bg-slate-100  rounded-lg  shadow-slate-500 shadow-md  basis-16 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <div class=" ">
+                                        <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
+                                    </div>
+                                    <p class="text-emerald-400 font-semibold " >
+                                        Active
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
+                                <div class=" flex flex-col text-center items-center px-4">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <div class="mt-5 ">
+                                        <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
+                                    </div>
+                                    <p class="text-emerald-400 font-semibold mt-2.5 " >
+                                        Active
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
+                                <div class=" flex flex-col text-center items-center px-4">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
                                         <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
                                     </div>
@@ -211,9 +258,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
                                         <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
                                     </div>
@@ -222,9 +269,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
                                         <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
                                     </div>
@@ -233,9 +280,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
                                         <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
                                     </div>
@@ -244,9 +291,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-slate-500 p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
                                         <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
                                     </div>
@@ -255,9 +302,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
                                         <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
                                     </div>
@@ -266,9 +313,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
                                         <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
                                     </div>
@@ -277,9 +324,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
                                         <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
                                     </div>
@@ -288,9 +335,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
                                         <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
                                     </div>
@@ -299,31 +346,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
+                            <div class="bg-slate-100 rounded-lg py-4 shadow-slate-500 shadow-md basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
-                                    <div class="mt-5 ">
-                                        <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
-                                    </div>
-                                    <p class="text-emerald-400 font-semibold mt-2.5 pb-5" >
-                                        Active
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
-                                <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
-                                    <div class="mt-5 ">
-                                        <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
-                                    </div>
-                                    <p class="text-emerald-400 font-semibold mt-2.5 pb-5" >
-                                        Active
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
-                                <div class=" flex flex-col text-center items-center px-4">
-                                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
                                         <h2 class="text-slate-800 font-bold text-2xl tracking-wide ">Jonathsn  Smith</h2>
                                     </div>
@@ -426,7 +451,7 @@
             <div class="md:container mx-auto md:px-4" bis_skin_checked="1">
               <div class="flex flex-wrap justify-center lg:mt-10 mt-10" bis_skin_checked="1">
                 <div class="w-full" bis_skin_checked="1">
-                  <div class="relative min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-100 md:pt-20" bis_skin_checked="1">
+                  <div class="relative min-w-0 break-words w-full mb-6 shadow-md rounded-lg bg-slate-100 md:pt-20" bis_skin_checked="1">
                     <div class="flex-auto p-5" bis_skin_checked="1">
                       <h4 class="text-4xl font-semibold text-center md:pb-10 text-slate-800 md:pb-[100px] pb-[20px]"> যোগাযোগ  </h4>
                       
