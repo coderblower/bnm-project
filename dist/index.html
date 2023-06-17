@@ -24,6 +24,7 @@
 </head>
 <body>
     <div class="main bg-slate-200 ">
+
         <section>
             <header>
                 <div class="header bg-slate-50">
@@ -50,9 +51,9 @@
                        
 
                         <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
-                            <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                            <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-center  md:flex-row md:px-6 lg:px-8 md:pb-3">
                                 <!-- log -->
-                                <div class="p-4 flex flex-row items-center justify-end">
+                                <div class="p-4 flex flex-row items-center  justify-end" style="margin-right: 133px;">
                                     
                                     <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
                                       <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -63,8 +64,8 @@
                                   </div>
                                 <!-- log end  -->
                                   <div>
-                                    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:items-center md:justify-center md:flex-row">
-                                        <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-red-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
+                                    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow md:pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                                        <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
                                         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
                                         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
                                         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
@@ -92,6 +93,7 @@
             </header>
         </section>
 
+
         <!-- header end  -->
 
 
@@ -118,62 +120,25 @@
         <!-- End User fidback massage  -->
         
         <!-- Photo gallery slider with pop up and link to more photos with page like assunna.com -->
-            <section class="sm:px-10 md:px-40 py-30">
-                <div class="hero_carosel owl-carousel owl-theme">
-                    <div class="item">
-                       <div class="hero-img">
-                          <img src="https://cdn.pixabay.com/photo/2018/03/12/12/32/woman-3219507__340.jpg" alt="">  
-                       </div>
-                       <div class="desc ">
-                          <span class="tag " >Welcome</span   >
-                          <h2>Photography is on it's way.</h2>
-                          <p class="carsl_cnt">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                          <p class="carsl_btn"><a href="#" class="btn-gradient-bg">View Galleries </a></p>
-                       </div>
-                    </div>
-                    <div class="item">
-                       <div class="hero-img">
-                          <img src="https://cdn.pixabay.com/photo/2016/12/30/10/03/dance-1940245__340.jpg" alt="">  
-                       </div>
-                       <div class="desc ">
-                          <span class="tag ">Discover</span>
-                          <h2 >Discover New Things</h2>
-                          <p class="carsl_cnt">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                          <p class="carsl_btn"><a href="#" class="btn-gradient-bg">Learn More</a></p>
-                       </div>
-                    </div>
-                    <div class="item">
-                       <div class="hero-img">
-                          <img src="https://cdn.pixabay.com/photo/2015/01/15/13/06/model-600238__340.jpg" alt="">  
-                       </div>
-                       <div class="desc ">
-                          <span class="tag ">Photography</span>
-                          <h2>Capture interesting things.</h2>
-                          <p class="carsl_cnt">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                          <p class="carsl_btn"><a href="#" class="btn-gradient-bg">View More</a></p>
-                       </div>
-                    </div>
-                    <div class="item">
-                       <div class="hero-img">
-                          <img src="https://cdn.pixabay.com/photo/2017/11/02/03/35/gothic-2910057__340.jpg" alt="">  
-                       </div>
-                       <div class="desc">
-                          <span class="tag">Work Hard</span>
-                          <h2>creative minds</h2>
-                          <p class="carsl_cnt">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                          <p class="carsl_btn"><a href="#" class="btn-gradient-bg">Learn More</a></p>
-                       </div>
-                    </div>
-                    <div class="item">
-                       <div class="hero-img">
-                          <img src="https://cdn.pixabay.com/photo/2016/11/29/02/28/attractive-1866858__340.jpg" alt="">  
-                       </div>
-                       <div class="desc ">
-                          <span class="tag">Passion</span>
-                          <h2>Multimedia Channel</h2>
-                          <p class="carsl_cnt">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                          <p class="carsl_btn"><a href="#" class="btn-gradient-bg">Learn More</a></p>
-                       </div>
+            <section class="  ">
+                <div class="">
+                    <div class="ff owl-carousel owl-theme ">
+                        <div class="item ">
+                            <img src="//dummyimage.com/740x300/fff/aaa" class="" style="width: 100%;" alt="">
+                        </div>
+                        <div class="item ">
+                            <img src="//dummyimage.com/740x300/fff/aaa" class="" style="width: 100%;" alt="">
+                        </div>
+                        <div class="item ">
+                            <img src="//dummyimage.com/740x300/fff/aaa" class="" style="width: 100%;" alt="">
+                        </div>
+                        <div class="item ">
+                            <img src="//dummyimage.com/740x300/fff/aaa" class="" style="width: 100%;" alt="">
+                        </div>
+                        <div class="item ">
+                            <img src="//dummyimage.com/740x300/fff/aaa" class="" style="width: 100%;" alt="">
+                        </div>
+                        
                     </div>
                  </div>
                  <div class="slider-counter"></div>
@@ -191,7 +156,15 @@
                 <div class="max-w-[1200px] mx-auto">
                         <div class="grid gap-2 grid-cols-3 ">
                             <div class="flex flex-col items-center text-center h-96 bg-slate-600 col-span-2">
-                                <div class="w-full ">hellso</div>
+                                <div class="flex flex-1 gap-10 justify-around items-center ">
+                                    <div class="basis-auto">
+                                        <img src="http://loremflickr.com/1000/600/news" class="h-full" alt="">
+                                    </div>
+                                    <div class="basis-[40%]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut,
+                                         consectetur! Reiciendis odio corporis eius amet magnam eveniet 
+                                         enim nemo repudiandae, suscipit, optio ea.
+                                    </div>
+                                </div>
                                 
                             </div>
                             <div class="flex flex-col gap-4 w-full items-stretch flex-1">
@@ -222,8 +195,8 @@
 
 
                       <section class="">
-                        <div class="grid  md:gap-6  grid-cols-2 gap-5 md:grid-cols-5  sm:gap-2  items-center justify-center">
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                        <div class="flex flex-wrap justify-around gap-10">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg  basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -234,7 +207,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -245,7 +218,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -256,7 +229,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -267,7 +240,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -278,7 +251,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -289,7 +262,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -300,7 +273,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -311,7 +284,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -322,7 +295,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -333,7 +306,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -344,7 +317,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg">
+                            <div class="bg-slate-600 rounded-lg py-4 shadow-slate-800 shadow-lg basis-28 md:basis-auto">
                                 <div class=" flex flex-col text-center items-center px-4">
                                     <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" class="rounded-full md:h-36 md:w-36 w-28 h-28 border-x-white bg-white p-1" alt="profile picture" srcset="">
                                     <div class="mt-5 ">
@@ -377,7 +350,7 @@
             <div class="py-10">
                     <h2 class="py-20 p-3 text-center text-4xl text-slate-800">ছবি গ্যালারী </h2>
                 <div class="gallery-slider_wrapper pb-20">
-                    <div class="single-gallery-carousel-content-box owl-carousel owl-theme">
+                    <div class="single-gallery-carousel-content-box ff2 owl-carousel owl-theme">
                         <a class="item" href="https://images.pexels.com/photos/631986/pexels-photo-631986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
                             <img src="https://images.pexels.com/photos/631986/pexels-photo-631986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Awesome Image"/>
                         </a>
@@ -542,6 +515,23 @@
                     </div>
                   </section>
                 <!-- End contact and message  -->
+
+
+
+                <!-- bnm e jog din   -->
+
+                <section>
+                    <div class="relative block " style="">
+                        <div class="flex flex-col ">
+                            <img src="https://placehold.co/1200x300" class="w-full" style="" alt="">
+                        </div>
+                        <div class="absolute text-center top-1/2 left-0 right-0 m-auto translate-[-50%]">
+                            <h2>bnm এ যোগ দিন </h2> <button> Join BNM </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- bnm e jog din Edn  -->
 
         <!-- custom section -->
             <div class="max-w-[1200px] grid grid-cols-1 mx-auto">
