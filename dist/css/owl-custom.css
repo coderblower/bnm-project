@@ -45,3 +45,112 @@
       height: 100%;
     }
     
+
+
+    .desc {
+      position: absolute;
+      padding: 8%;
+      z-index: 9;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%); 
+      color:#fff;
+   
+      }
+   
+      .hero-img{
+         position: relative;
+      }
+   
+   
+      .hero-img:before {
+          background: rgba(0, 0, 0, 0.38);
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+      }
+   
+      .btn-gradient-bg {
+          color: #fff;
+          display: inline-block;
+          padding: 11px 33px;
+          background: linear-gradient(to right, #f05874 0%, #fc6a2a 100%);
+          border-radius: 30px;
+      }
+      .delay-1 {
+      animation-delay: .2s;
+      }
+      .delay-2 {
+      animation-delay: .4s;
+      }    
+      .delay-3 {
+      animation-delay: .6s;
+      }    
+      .delay-4 {
+      animation-delay: .8s;
+      }
+   
+   
+   
+      .slider-counter {
+          z-index: 99;
+          bottom: 1%;
+          position: absolute;
+          text-align: center;
+          right: 4%;
+          font-size: 120px;
+          color:rgba(242, 242, 242, 0.7);
+          font-weight: 700;
+      }
+      @media (max-width: 767px){
+          .slider-counter {
+              font-size: 80px;
+              font-weight: 600;
+              bottom: 0
+   
+          }
+      }
+      @media (max-width: 576px){
+          .slider-counter {
+              font-size: 30px;
+              font-weight: 500;
+              bottom: 0
+   
+          }
+      }
+   
+      .hero_carosel .owl-nav button.owl-prev,.hero_carosel .owl-nav button.owl-next{
+     
+         position: absolute;
+         bottom: 50%;
+         right: 50%;
+         color: #000;
+      }
+   
+      .hero_carosel .owl-nav button.owl-prev{
+         left: 0
+      }
+   
+      .hero_carosel .owl-nav button.owl-next{
+         right: 0
+      }
+   
+     .hero_carosel i.owl-direction {
+          margin: 0 13px;
+          font-size: 3em;
+          padding: 0;
+          color: #607D8B;
+      }
+   
+      .hero_carosel .owl-nav button.owl-next,.hero_carosel .owl-nav button.owl-prev{
+          outline: 0;
+          background: #FFF
+          }
+   
+   .tag{
+      display: inline-block;
+   }
+   @keyframes fadeInUp{0%{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:translateZ(0)}}.fadeInUp{animation-name:fadeInUp}
