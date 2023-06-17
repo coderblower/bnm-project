@@ -34,7 +34,7 @@ $('.ff').owlCarousel({
   
           $sync1.owlCarousel({ //function for preview carousel
               items: 1,
-              margin: 0,
+              margin: 10,
               nav: true,
               dots: false,
               touchDrag  : false,
