@@ -27,19 +27,23 @@ $('.ff').owlCarousel({
 
     
   
-      var $sync1 = $(".ff2"), // variable declaration
+      var sync1 = $(".ff2"), // variable declaration
         //   $sync2 = $(".single-gallery-carousel-thumbnail-box"),
           flag = false,
           duration = 500;
   
-          $sync1.owlCarousel({ //function for preview carousel
+          sync1.owlCarousel({ //function for preview carousel
               items: 1,
               margin: 10,
               nav: true,
               dots: false,
               touchDrag  : false,
               mouseDrag  : false,
-              Infinity:true,
+              loop:true,
+            
+              autoplay:true,
+              autoplayTimeout:1500,
+              autoplayHoverPause:true,
               responsive:{
                 0:{
                     items:5
@@ -63,6 +67,12 @@ $('.ff').owlCarousel({
                   flag = false;
               }
           });
+          $('.ff2').on('click',function(){
+            sync1.trigger('stop.owl.autoplay')
+        })
+          function hasClass(element, className) {
+            return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+        }
   
           $('.single-gallery-carousel-content-box').magnificPopup({ //function for magnific popup
               type: 'image',
@@ -74,7 +84,17 @@ $('.ff').owlCarousel({
                   beforeOpen: function() {
                        this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
                        this.st.mainClass = this.st.el.attr('data-effect');
-                  }
+                  },
+                  elementParse: function(item) {
+                    let videoEnabled = hasClass(item.el[0], 'video-link')
+                    // the class name
+                    // console.log(item)
+                    if(videoEnabled) {
+                      item.type = 'iframe';
+                    } else {
+                      item.type = 'image';
+                    }
+                 }
               },
               tLoading: 'Loading image #%curr%...',
               mainClass: 'mfp-zoom-in mfp-img-mobile',
