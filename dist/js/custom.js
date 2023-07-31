@@ -46,7 +46,7 @@ $('.ff').owlCarousel({
               autoplayHoverPause:true,
               responsive:{
                 0:{
-                    items:5
+                    items:2
                 },
                 600:{
                     items:3
