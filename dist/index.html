@@ -29,12 +29,14 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
     <link rel="stylesheet" href="css/owl-custom.css">
-
+    <link rel="stylesheet" href="style.css">
 
     <script src="js/jquery.min.js"></script>
     <!-- script -->
     <script src="js/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.13.0/cloudinary-core.min.js"> </script> -->
 
 
@@ -456,10 +458,24 @@
           </section>
         <!-- End contact and message  -->
 
-
+        <!-- start image area -->
+        <section>
+            <div id="app" class=" max-w-[1200px] w-full my-0 mx-auto rounded-lg p-20 grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3  gap-3">
+                <div id="photo-filter" class="menu justify-center ">
+                  <button v-for="(category, index) in categories" @click="filter(category)" :class="{selected: selectedCat === category}">Category {{index + 1}}</button>
+                  <button @click="filter('all')" :class="{selected: selectedCat === 'all'}">All</button>
+                </div>
+                <div class="mb-10 pb-9 relative" v-if="selectedCat === preview.cat || selectedCat === 'all'" v-for="preview in previews" :class="'preview ' + preview.cat">
+                        <img :src="preview.url" class="max-w-[100%] " alt="">
+                        <div><h3>{{preview.cap}}</h3></div>
+                </div> 
+        
+              </div>
+        </section>
+        <!-- image area -->
 
         <!-- image and video gellay start -->
-        <div class="max-w-[1200px] mx-auto">
+        <div class="image-gallery max-w-[1200px] mx-auto">
             <div class="py-10">
                     <h2 class="py-20 p-3 text-center text-4xl text-slate-800">ছবি গ্যালারী </h2>
                 <div class="gallery-slider_wrapper pb-20">
@@ -541,7 +557,7 @@
     
 
         <!-- contact and message  -->
-        <section class="relative block lg:pt-0 bg-slate-50">
+        <section id="contact" class="relative block lg:pt-0 bg-slate-50">
             <div class="md:container mx-auto md:px-4" bis_skin_checked="1">
               <div class="flex flex-wrap justify-center lg:mt-10 mt-5 pb-20" bis_skin_checked="1">
                 <div class="w-full" bis_skin_checked="1">
@@ -655,7 +671,7 @@
                 <!-- bnm e jog din Edn  -->
 
         <!-- custom section -->
-            <div class="mx-auto">
+            <div id="copyright" class="mx-auto">
                 <div class="text-center bg-slate-900 p-8 "><span class="text-slate-100">Copyright © 2023 BNM </span></div>
             </div>
         <!-- custom section End -->

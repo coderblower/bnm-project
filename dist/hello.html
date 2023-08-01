@@ -85,11 +85,9 @@ button {
           <button v-for="(category, index) in categories" @click="filter(category)" :class="{selected: selectedCat === category}">Category {{index + 1}}</button>
           <button @click="filter('all')" :class="{selected: selectedCat === 'all'}">All</button>
         </div>
-        <div v-if="selectedCat === preview.cat || selectedCat === 'all'" v-for="preview in previews" :class="'preview ' + preview.cat">
-                <img :src="preview.cat" alt="">
-        </div>
-
-        
+        <div class="" v-if="selectedCat === preview.cat || selectedCat === 'all'" v-for="preview in previews" :class="'preview ' + preview.cat">
+                <img :src="preview.url" class="max-w-sm" alt="">
+        </div> 
 
       </div>
       <script>
@@ -102,15 +100,15 @@ button {
       'cat3'
     ],
     previews: [
-    	{cat: 'cat1'},
-      {cat: 'cat1'},
-      {cat: 'cat1'},
-      {cat: 'cat2'},
-      {cat: 'cat2'},
-      {cat: 'cat2'},
-      {cat: 'cat2'},
-      {cat: 'cat3'},
-      {cat: 'cat3'},
+    	{cat: 'cat1', url:'https://placehold.co/600x400'},
+      {cat: 'cat1', url:'https://placehold.co/600x400'},
+      {cat: 'cat1', url:'https://placehold.co/600x400'},
+      {cat: 'cat2', url:'https://placehold.co/600x400'},
+      {cat: 'cat2', url:'https://placehold.co/600x400'},
+      {cat: 'cat2', url:'https://placehold.co/600x400'},
+      {cat: 'cat2', url:'https://placehold.co/600x400'},
+      {cat: 'cat3', url:'https://placehold.co/600x400'},
+      {cat: 'cat3', url:'https://placehold.co/600x400'},
     ],
     selectedCat: 'all',
   },

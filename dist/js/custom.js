@@ -63,7 +63,7 @@ $('.ff').owlCarousel({
               //alert(currentItem);
               if (!flag) {
                   flag = true;
-                  $sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                  // $sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
                   flag = false;
               }
           });
@@ -149,7 +149,67 @@ $('.ff').owlCarousel({
         //       }
         //   });
     //   console.log('fired')
-  
+    new Vue({
+        el: "#app",
+        data: {
+            categories: [
+              'cat1',
+            'cat2',
+            'cat3'
+          ],
+          previews: [
+              {cat: 'cat1', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat1', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat1', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat2', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat2', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat2', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat2', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat3', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat3', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat3', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat3', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat3', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat3', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat3', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+          ],
+          selectedCat: 'all',
+        },
+        methods: {
+            filter(selection) {
+              this.selectedCat = selection;
+          }
+        },
+        mounted() {
+            this.previews = _.shuffle(this.previews);
+        }
+      })
+
+
+
+    let yourNavigation = $(".menu");
+    let stickyDiv = " sticky";
+    let limitElement = $('.image-gallery').height()-50;
+    var elm = document.querySelector('#photo-filter');
+    let mounted = false;
+
+    
+    console.log(elm.offsetTop, 'offset')
+
+
+$(window).scroll(function() {
+  // console.log($(this).scrollTop(), yourHeader)
+  console.log($(this).scrollTop(), elm.offsetTop)
+  if(  $(this).scrollTop() > elm.offsetTop && $(this).scrollTop() && !mounted) {
+    yourNavigation.addClass(stickyDiv);
+    console.log('mounted')
+    mounted = true;
+  } else{
+    yourNavigation.removeClass(stickyDiv)
+    mounted = false;
+  }
+
+});
   
 
   
