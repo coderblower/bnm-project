@@ -154,11 +154,11 @@ $('.ff').owlCarousel({
         data: {
             categories: [
               'cat1',
-            'cat2',
-            'cat3'
+              'cat2',
+              'cat3'
           ],
           previews: [
-              {cat: 'cat1', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
+            {cat: 'cat1', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
             {cat: 'cat1', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
             {cat: 'cat1', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
             {cat: 'cat2', url:'https://placehold.co/600x400', cap:'lorem ispsum loarem ipsum loream '},
@@ -189,25 +189,32 @@ $('.ff').owlCarousel({
 
     let yourNavigation = $(".menu");
     let stickyDiv = " sticky";
-    let limitElement = $('.image-gallery').height()-50;
-    var elm = document.querySelector('#photo-filter');
+    var elm = $('#photo-filter');
     let mounted = false;
-
+    let elmoffset = elm.offset().top;
     
-    console.log(elm.offsetTop, 'offset')
+    
+    
 
 
 $(window).scroll(function() {
   // console.log($(this).scrollTop(), yourHeader)
-  console.log($(this).scrollTop(), elm.offsetTop)
-  if(  $(this).scrollTop() > elm.offsetTop && $(this).scrollTop() && !mounted) {
-    yourNavigation.addClass(stickyDiv);
-    console.log('mounted')
-    mounted = true;
-  } else{
-    yourNavigation.removeClass(stickyDiv)
+  
+  // console.log($(this).scrollTop(), elmoffset)
+  console.log(mounted, elmoffset, $(this).scrollTop())
+
+  if(mounted && ($(this).scrollTop() < elmoffset || $(this).scrollTop() >  elmoffset+300)) {
+    yourNavigation.removeClass(stickyDiv);
     mounted = false;
+    return
   }
+
+  if(!mounted && $(this).scrollTop()>elmoffset && $(this).scrollTop()<elmoffset+300){
+    yourNavigation.addClass(stickyDiv);
+    mounted = true;
+  }
+    
+  
 
 });
   

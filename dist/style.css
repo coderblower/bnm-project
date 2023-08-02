@@ -20,7 +20,7 @@ body {
     height: 200px;
     width: 0%;
     opacity: 0;
-    animation: appear .5s ease-in-out forwards;
+    animation: appear .9s ease-in-out forwards;
   }
   
   .cat1 {
