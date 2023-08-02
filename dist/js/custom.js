@@ -197,26 +197,26 @@ $('.ff').owlCarousel({
     
 
 
-$(window).scroll(function() {
-  // console.log($(this).scrollTop(), yourHeader)
+// $(window).scroll(function() {
+//   // console.log($(this).scrollTop(), yourHeader)
   
-  // console.log($(this).scrollTop(), elmoffset)
-  console.log(mounted, elmoffset, $(this).scrollTop())
+//   // console.log($(this).scrollTop(), elmoffset)
+//   console.log(mounted, elmoffset, $(this).scrollTop())
 
-  if(mounted && ($(this).scrollTop() < elmoffset || $(this).scrollTop() >  elmoffset+300)) {
-    yourNavigation.removeClass(stickyDiv);
-    mounted = false;
-    return
-  }
+//   if(mounted && ($(this).scrollTop() < elmoffset || $(this).scrollTop() >  elmoffset+300)) {
+//     yourNavigation.removeClass(stickyDiv);
+//     mounted = false;
+//     return
+//   }
 
-  if(!mounted && $(this).scrollTop()>elmoffset && $(this).scrollTop()<elmoffset+300){
-    yourNavigation.addClass(stickyDiv);
-    mounted = true;
-  }
+//   if(!mounted && $(this).scrollTop()>elmoffset && $(this).scrollTop()<elmoffset+300){
+//     yourNavigation.addClass(stickyDiv);
+//     mounted = true;
+//   }
     
   
 
-});
+// });
   
 
   
