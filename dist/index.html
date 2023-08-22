@@ -54,7 +54,7 @@
                     <div class=" max-w-[1200px] mx-auto grid grid-col-1 md:grid-cols-2 py-3">
                         <div class="head-left header-top flex md:flex-col justify-around align-middle ">
                             <div class="logo ">
-                                <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img class="h-16" src="img/logo.png" alt=""></a>
+                                <a href="/dist/index.html" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img class="h-16" src="img/logo.png" alt=""></a>
                             </div>
                        </div>
                        <div class="head-right flex flex-col md:flex-row align-middle justify-end md:items-center md:mx-0 mx-auto ">
@@ -72,11 +72,11 @@
                         <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
                             <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-center  md:flex-row md:px-6 lg:px-8 md:pb-3">
                                 <!-- log -->
-                                <div class="p-4 flex flex-row items-center  justify-end" style="margin-right: 133px;">
+                                <div class="flex flex-row items-center  justify-end" style="margin-right: 27px; margin-top: -21px;">
                                     
-                                    <svg class=" absolute top-[83px] md:hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/> </svg>
+                                
                                     <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-                                        <svg fill="currentColor"  viewBox="0 0 20 20" class="w-6 h-6 absolute top-[83px] right-[64px]">
+                                        <svg fill="currentColor"  viewBox="0 0 20 20" class="w-6 h-6 ">
                                         <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
                                         <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                       </svg>
@@ -86,7 +86,7 @@
                                 <!-- log end  -->
                                   <div>
                                     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow md:pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-                                        <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
+                                        <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/dist/index.html">Home</a>
                                         <div @click.away="open = false" class="relative" x-data="{ open: false }">
                                             <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                                 <span>About BNM </span>
@@ -94,9 +94,9 @@
                                             </button>
                                             <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-10">
                                                 <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                                                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#"> দলের গঠনতন্ত্র ও ঘোষণাপত্র</a>
-                                                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#"> লক্ষ্য ও উদ্দ্যেশ্য </a>
-                                                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">কেন্দ্রীয় আহব্বায়ক কমিটি</a>
+                                                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/dist/gothontontro.html"> দলের গঠনতন্ত্র ও ঘোষণাপত্র</a>
+                                                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/dist/29_dofa.html"> লক্ষ্য ও উদ্দ্যেশ্য </a>
+                                                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/dist/ahobyaok_committee.html">কেন্দ্রীয় আহব্বায়ক কমিটি</a>
                                                 </div>
                                             </div>
                                         </div>  
@@ -127,6 +127,7 @@
                 </div>
             </header>
         </section>
+        <!-- header end  -->
 
 
         <!-- header end  -->
@@ -184,9 +185,9 @@
         <!-- card section start -->
         <section class="py-20 bg-slate-50">
             <div class="grid md:grid-cols-[repeat(auto-fit,_20.666666%)] grid-col-1 text-center m-auto p-24 sm:p-7 justify-center gap-7     bg-slate-100">
-                <div class="border-2 text-slate-50 bg-red-500 rounded-lg p-10 hover:shadow-lg shadow-sm cursor-pointer leading-loose font-bold text-lg transition-all hover:scale-125"><span>লক্ষ্য ও উদ্দ্যেশ্য /</span> <h3>BNM এর ২৯ দফা সমূহ</h3></div>
-                <div class="border-2 rounded-lg p-10 text-slate-50 bg-green-600 hover:shadow-lg leading-loose font-bold shadow-sm cursor-pointer text-xl transition-all text-center hover:scale-125">BNM এর গঠনতন্ত্র ও ঘোষণাপত্র</div>
-                <div class="border-2 rounded-lg p-10 hover:shadow-lg bg-yellow-500 text-slate-50 leading-loose font-bold shadow-sm cursor-pointer text-xl transition-all hover:scale-125">বিএনএম <br> এর <br> সদস্যতা নিন </div>
+                <a href="/dist/29_dofa.html"><div class="border-2 text-slate-50 bg-red-500 rounded-lg p-10 hover:shadow-lg shadow-sm cursor-pointer leading-loose font-bold text-lg transition-all hover:scale-125"><span>লক্ষ্য ও উদ্দ্যেশ্য /</span> <h3>BNM এর ২৯ দফা সমূহ</h3></div></a>
+                <a href="/dist/gothontontro.html"><div class="border-2 rounded-lg p-10 text-slate-50 bg-green-600 hover:shadow-lg leading-loose font-bold shadow-sm cursor-pointer text-xl transition-all text-center hover:scale-125">BNM এর গঠনতন্ত্র <br> ও <br> ঘোষণাপত্র</div></a>
+                <a href="#"><div class="border-2 rounded-lg p-10 hover:shadow-lg bg-yellow-500 text-slate-50 leading-loose font-bold shadow-sm cursor-pointer text-xl transition-all hover:scale-125">বিএনএম <br> এর <br> সদস্যতা নিন </div></a>
             </div>
         </section>
         <!-- card section End -->
@@ -199,27 +200,24 @@
                 <!-- News Area  -->
         <section>
 
-            <div class=" mx-auto bg-slate-200 pr-5">
+            <div class=" mx-auto bg-slate-50 pr-5 pb-20">
                 <h2 class="text-center py-10 pb-10 text-6xl "> BNM News  </h2>
                 <div class="grid md:grid-cols-3 grid-cols-1">
                     <div class="text-center mr-4 mb-5 md:mb-0 pb-20">
                         <div class="sub2-lead-content">
-                                    <div class="sub2-lead-news flex h-full items-center justify-between pt-2 ">
+                                    <div class="sub2-lead-news flex h-[100px] items-center justify-between pt-2 ">
                                         <div class="title" class="basis-1 " style="  flex: 3 1 0;"><h2>‘বিএনপিকে ভাঙতে চায় না বিএনএম’</h2></div>
                                         <img src='https://d2u0ktu8omkpf6.cloudfront.net/e4f98e36a98984bcc86911866c6e4827eb3f8d1ce8245cd2.jpg' width="100px" height="200px" class="pl-2" alt=''/>
                                     </div>
-                                    <div class="sub2-lead-news flex justify-center items-center pt-2">
+                                    <div class="sub2-lead-news flex h-[100px] justify-center items-center pt-2">
                                         <div class="title" class="basis-1 " style="  flex: 3 1 0;"><h2>বিএনএম'র প্রতীক পরিবর্তন চেয়ে সিইসিকে জাতীয় পার্টির চিঠি</h2></div>
                                         <img src='https://cdn.ittefaq.com/contents/cache/images/1100x617x1/uploads/media/2023/08/13/2498145fa63cf78d7739e5374bbefd38-64d88e069c2b4.jpeg?jadewits_media_id=122250' width="100px" height="200px" class="pl-2" alt=''/>
                                     </div>
-                                    <div class="sub2-lead-news flex justify-center items-center pt-2">
+                                    <div class="sub2-lead-news flex h-[100px] justify-center items-center pt-2">
                                         <div class="title" class="basis-1 " style="  flex: 3 1 0;"><h2>নতুন দল নিবন্ধন: বিএনএম ও বিএসপির দাবি-আপত্তি শুনল ইসি</h2></div>
                                         <img src='https://gumlet.assettype.com/bdnews24%2F2023-04%2F4de8fdd6-228a-430d-aae4-0b02c10a641e%2Felection_commission_030921_07.jpg?auto=format%2Ccompress&fmt=webp&format=webp&w=576' width="100px" height="200px" class="pl-2" alt=''/>
                                     </div>
-                                    <div class="sub2-lead-news flex justify-center items-center pt-2">
-                                        <div class="title" class="basis-1 " style="  flex: 3 1 0;">Lorem ipsum dolor sit amet congs.</div>
-                                        <img src='https://placehold.it/300x300' width="100px" height="200px" class="pl-2" alt=''/>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="text-center flex justify-center items-center flex-col ">
@@ -236,18 +234,7 @@
                                         <div class="title" class="basis-1 " style="  flex: 3 1 0;">রুচিহীনরাই বিএনএম-কে নিয়ে অরুচিকর মন্তব্য করছেন: দলের আহ্বায়ক</div>
                                         <img src='https://placehold.it/300x300' width="100px" height="200px" class="pl-2" alt=''/>
                                     </div>
-                                    <div class="sub2-lead-news flex justify-center items-center pt-2">
-                                        <div class="title" class="basis-1 " style="  flex: 3 1 0;">Lorem ipsum dolor sit amet consectetur.</div>
-                                        <img src='https://placehold.it/300x300' width="100px" height="200px" class="pl-2" alt=''/>
-                                    </div>
-                                    <div class="sub2-lead-news flex justify-center items-center pt-2">
-                                        <div class="title" class="basis-1 " style="  flex: 3 1 0;">Lorem ipsum dolor sit amet consectetur.</div>
-                                        <img src='https://placehold.it/300x300' width="100px" height="200px" class="pl-2" alt=''/>
-                                    </div>
-                                    <div class="sub2-lead-news flex justify-center items-center pt-2">
-                                        <div class="title" class="basis-1 " style="  flex: 3 1 0;">Lorem ipsum dolor sit amet congs.</div>
-                                        <img src='https://placehold.it/300x300' width="100px" height="200px" class="pl-2" alt=''/>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -260,16 +247,46 @@
                 <!-- top news and event like aci motors (optional ) -->
                 <!-- End top news and event like aci motors (optional ) -->
                 
+                
+                <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 
           <!-- card section start -->
           <section>
             <div class="m-auto bg-cyan-50">
                 <div><h2 class="text-center text-cyan-500 pt-10 text-3xl font-bold shadow-md pb-10">গনমাধ্যমের খবরে -  বি এন এম </h2></div>
                 <div class="grid md:grid-cols-3 grid-col-1 text-center m-auto p-10 md:p-24 justify-center gap-2">
-                    <div class="border-2 text-slate-50 bg-red-500 rounded-lg p-10 hover:shadow-lg shadow-sm cursor-pointer leading-loose font-bold text-lg transition-all hover:scale-125">অবশেষে নিবন্ধন পেলে বি এন এম  <br> - ইত্তেফাক </h3></div>
-                    <div class="border-2 rounded-lg p-10 text-slate-50 bg-green-600 hover:shadow-lg leading-loose font-bold shadow-sm cursor-pointer text-xl transition-all text-center hover:scale-125">কেউ জানে না কেউ চেনে না <br> - সময় টিভি </div>
-                    <div class="border-2 text-slate-50 bg-red-500 rounded-lg p-10 hover:shadow-lg shadow-sm cursor-pointer leading-loose font-bold text-lg transition-all hover:scale-125">অবশেষে নিবন্ধন পেলে বি এন এম  <br> - ইত্তেফাক </h3></div>
-                    <div class="border-2 rounded-lg p-10 text-slate-50 bg-green-600 hover:shadow-lg leading-loose font-bold shadow-sm cursor-pointer text-xl transition-all text-center hover:scale-125">কেউ জানে না কেউ চেনে না <br> - সময় টিভি </div>
+                    
+                    
+                    <div class="fb-video" data-href="https://fb.watch/mA9-c5t-U9/" data-width="500"  data-show-text="false">
+                        <div class="fb-xfbml-parse-ignore">
+                          <blockquote cite="https://www.facebook.com/facebook/videos/10153231379946729/">
+                            <a href="https://fb.watch/mA9-c5t-U9/">How to Share With Just Friends</a>
+                            <p>How to share with just friends.</p>
+                            Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on Friday, December 5, 2014
+                          </blockquote>
+                        </div>
+                      </div>
+                    
+                    <div class="fb-video" data-href="https://www.facebook.com/watch/?v=827513889092641" data-width="500" data-show-text="false">
+                        <div class="fb-xfbml-parse-ignore">
+                          <blockquote cite="https://www.facebook.com/facebook/videos/10153231379946729/">
+                            <a href="https://fb.watch/mA9-c5t-U9/">How to Share With Just Friends</a>
+                            <p>How to share with just friends.</p>
+                            Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on Friday, December 5, 2014
+                          </blockquote>
+                        </div>
+                      </div>
+                    
+                    <div class="fb-video" data-href="https://www.facebook.com/61550359983819/videos/301340489244339" data-width="500" data-show-text="false">
+                        <div class="fb-xfbml-parse-ignore">
+                          <blockquote cite="https://www.facebook.com/facebook/videos/10153231379946729/">
+                            <a href="https://fb.watch/mA9-c5t-U9/">How to Share With Just Friends</a>
+                            <p>How to share with just friends.</p>
+                            Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on Friday, December 5, 2014
+                          </blockquote>
+                        </div>
+                      </div>
+                    
                     
                     
                 </div>
@@ -277,8 +294,11 @@
         </section>
         <!-- card section End -->
         
+
+        
+
         <!-- contact and message  -->
-        <section class="relative block sm:py-10  lg:pt-0 bg-slate-200">
+        <!-- <section class="relative block sm:py-10  lg:pt-0 bg-slate-200">
             <div class=" ">
               <div class="flex justify-center lg:mt-10 mt-10" bis_skin_checked="1">
                 <div class="flex-1 md:px-4 pt-20" bis_skin_checked="1">
@@ -459,18 +479,18 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
         <!-- End contact and message  -->
 
         <!-- start image area -->
         <section>
             <div id="app" class=" max-w-[1200px] w-full my-0 mx-auto rounded-lg p-20 single-gallery-carousel-content-box grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 justify-center gap-3">
                 <div id="photo-filter" class="menu justify-center ">
-                  <button v-for="(category, index) in categories" @click="filter(category)" :class="{selected: selectedCat === category}">Category {{index + 1}}</button>
+                  <button v-for="(category, index) in categories" @click="filter(category)" :class="{selected: selectedCat === category}">{{ (category == 'jogdan')? 'যোগদান কর্মসুচি': 'দলীয় কর্মসুচী' }}</button>
                   <button @click="filter('all')" :class="{selected: selectedCat === 'all'}">All</button>
                 </div>
                 <div class="mb-10 pb-9 relative " v-if="selectedCat === preview.cat || selectedCat === 'all'" v-for="preview in previews" :class="'preview ' + preview.cat">
-                        <img :src="preview.url" class="max-w-[100%] " alt="">
+                        <img :src="preview.url" class="max-w-[100%] " style="height: 200px;" alt="">
                         <div><h3>{{preview.cap}}</h3></div>
                 </div> 
         
@@ -563,7 +583,7 @@
         <!-- contact and message  -->
         <section id="contact" class="relative block lg:pt-0 bg-slate-50">
             <div class="md:container mx-auto md:px-4" bis_skin_checked="1">
-              <div class="flex flex-wrap justify-center lg:mt-10 mt-5 pb-20" bis_skin_checked="1">
+              <div class="flex flex-wrap justify-center lg:mt-10 mt-5 pb-10" bis_skin_checked="1">
                 <div class="w-full" bis_skin_checked="1">
                   <div class="relative min-w-0 break-words w-full mb-6 shadow-md rounded-lg bg-slate-100 md:pt-20" bis_skin_checked="1">
                     <div class="flex-auto p-5 pb-20 " bis_skin_checked="1">
@@ -609,54 +629,44 @@
             </div>
           </section>
         <!-- End contact and message  -->
-
-
-
-
-
-        <!-- Bnm E jog din  -->
-        <!-- end Bnm E jog din  -->
-
-
  
-                <!-- contact and message  -->
-                <section class="relative block py-10 md:px-10 lg:pt-0 ">
-                    <div class="container mx-auto px-4" bis_skin_checked="1">
-                      <div class="flex flex-wrap justify-center lg:mt-10 mt-10" bis_skin_checked="1">
-                        <div class="w-full lg:w-4/6 md:px-4 pt-20" bis_skin_checked="1">
-                          <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-50 pt-20" bis_skin_checked="1">
-                            <div class="flex-auto p-5 lg:p-10" bis_skin_checked="1">
-                              <h4 class="text-4xl font-semibold text-center">Contact With Us</h4>
-                              <p class="leading-relaxed mt-1 mb-4 text-slate-500 text-center md:mt-5">Complete this form and we will get back to you .</p>
-                              <div class=" md:grid md:grid-cols-2 md:gap-4">
-                                <div class=" w-full  mb-3 mt-8" bis_skin_checked="1">
-                                    <label class="block uppercase text-slate-600 text-xs font-bold mb-2" for="full-name">Name</label>
-                                    <input type="text" class="border-0 px-3 py-3 placeholder-slate-400 font-bold text-slate-400 bg-slate-200 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Full Name">
-                                  </div>
-                                  <div class=" w-full mb-3 md:mt-8 " bis_skin_checked="1">
-                                    <label class="block uppercase text-slate-600 text-xs font-bold mb-2" for="email">Email</label>
-                                    <input type="email" class="border-0 px-3 py-3 placeholder-slate-400 font-bold text-slate-500 bg-slate-200 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Email">
-                                  </div>
-                                  <div class=" w-full mb-3 " bis_skin_checked="1">
-                                    <label class="block uppercase text-slate-600 text-xs font-bold mb-2" for="email">Phone</label>
-                                    <input type="phone" class="border-0 px-3 py-3 placeholder-slate-400 font-bold text-slate-500 bg-slate-200 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Phone">
-                                  </div>
-                              </div>
-                              <div class="relative w-full  mb-3 md:mt-5" bis_skin_checked="1">
-                                <label class="block uppercase text-slate-600 text-xs font-bold mb-2" for="message">Message</label>
-                                <textarea rows="4" cols="80" class="border-0 px-3 py-3 placeholder-slate-400 font-bold text-slate-600 bg-slate-200 rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Type a message..." style="height: 139px;"></textarea>
-                              </div>
-                              <div class="text-center mt-6" bis_skin_checked="1">
-                                <button class="bg-green-700 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">Send Message</button>
-                              </div>
-                            </div>
+        <!-- contact and message  -->
+        <section class="relative block py-10 md:px-10 lg:pt-0 ">
+            <div class="container mx-auto px-4" bis_skin_checked="1">
+              <div class="flex flex-wrap justify-center lg:mt-10 mt-10" bis_skin_checked="1">
+                <div class="w-full lg:w-4/6 md:px-4 " bis_skin_checked="1">
+                  <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-50" bis_skin_checked="1">
+                    <div class="flex-auto p-5 lg:p-10" bis_skin_checked="1">
+                      <h4 class="text-4xl font-semibold text-center">Contact With Us</h4>
+                      <p class="leading-relaxed mt-1 mb-4 text-slate-500 text-center md:mt-5">Complete this form and we will get back to you .</p>
+                      <div class=" md:grid md:grid-cols-2 md:gap-4">
+                        <div class=" w-full  mb-3 mt-8" bis_skin_checked="1">
+                            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" for="full-name">Name</label>
+                            <input type="text" class="border-0 px-3 py-3 placeholder-slate-400 font-bold text-slate-400 bg-slate-200 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Full Name">
                           </div>
-                        </div>
+                          <div class=" w-full mb-3 md:mt-8 " bis_skin_checked="1">
+                            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" for="email">Email</label>
+                            <input type="email" class="border-0 px-3 py-3 placeholder-slate-400 font-bold text-slate-500 bg-slate-200 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Email">
+                          </div>
+                          <div class=" w-full mb-3 " bis_skin_checked="1">
+                            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" for="email">Phone</label>
+                            <input type="phone" class="border-0 px-3 py-3 placeholder-slate-400 font-bold text-slate-500 bg-slate-200 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Phone">
+                          </div>
+                      </div>
+                      <div class="relative w-full  mb-3 md:mt-5" bis_skin_checked="1">
+                        <label class="block uppercase text-slate-600 text-xs font-bold mb-2" for="message">Message</label>
+                        <textarea rows="4" cols="80" class="border-0 px-3 py-3 placeholder-slate-400 font-bold text-slate-600 bg-slate-200 rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Type a message..." style="height: 139px;"></textarea>
+                      </div>
+                      <div class="text-center mt-6" bis_skin_checked="1">
+                        <button class="bg-green-700 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">Send Message</button>
                       </div>
                     </div>
-                  </section>
-                <!-- End contact and message  -->
-
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <!-- End contact and message  -->
 
 
                 <!-- bnm e jog din   -->
