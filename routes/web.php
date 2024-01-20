@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainVouture;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
 
@@ -18,8 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
- 
+
 Route::view('/counter', 'app');
 
 
-// c
+Route::get('/showvouture',[ MainVouture::class, 'add']);
