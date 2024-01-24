@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\vouture;
 use App\Http\Requests\StorevoutureRequest;
 use App\Http\Requests\UpdatevoutureRequest;
+use App\Models\vouture_single;
 
 class VoutureController extends Controller
 {
@@ -13,6 +14,9 @@ class VoutureController extends Controller
      */
     public function index()
     {
+        $voutures = vouture::all();
+        $single_voutures = vouture_single::all();
+        return view("vouture.show", compact("voutures","single_voutures"));
         //
     }
 

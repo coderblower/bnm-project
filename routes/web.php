@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\MainVouture;
+use App\Http\Controllers\VoutureController;
+use App\Livewire\Allproduct;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
 
@@ -23,4 +25,4 @@ Route::get('/', function () {
 Route::view('/counter', 'app');
 
 
-Route::get('/showvouture',[ MainVouture::class, 'add']);
+Route::get('/vou', [VoutureController::class, 'index']);
