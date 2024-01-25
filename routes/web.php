@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\MainVouture;
+use App\Http\Controllers\VoutureController;
+use App\Livewire\Allproduct;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Counter;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +22,7 @@ Route::get('/', function () {
 });
 
 
-// c
+Route::view('/counter', 'app');
+
+
+Route::get('/vou', [VoutureController::class, 'index']);

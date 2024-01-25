@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+    <style>
+        body {
+  background: #20262E;
+  padding: 20px;
+  font-family: Helvetica, Arial, Sans-Serif;
+}
+
+#app {
+  background: #fff;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+}
+
+.preview {
+  height: 100px;
+  width: 0%;
+  opacity: 0;
+  animation: appear .5s ease-in-out forwards;
+}
+
+.cat1 {
+  background: gold;
+}
+.cat2 {
+  background: #333;
+}
+.cat3 {
+  background: #ddd;
+}
+
+.menu {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: flex;
+  flex-flow: wrap;
+  margin: -5px -5px;
+}
+
+button {
+  cursor: pointer;
+  margin: 5px 5px;
+  border: 0;
+  padding: 5px 10px;
+  background: #ddd;
+  border: 1px solid #ddd;
+  transition: .3s ease-in-out;
+  transition-property: background, border, color;
+  &.selected {
+    background: #fff;
+    color: #333;
+    border: 1px solid #333;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: #fff;
+    background: #333;
+    border: 1px solid #333;
+  }
+}
+
+@keyframes appear {
+  to {width: 100%; opacity: 1;}
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="menu">
+          <button v-for="(category, index) in categories" @click="filter(category)" :class="{selected: selectedCat === category}">Category {{index + 1}}</button>
+          <button @click="filter('all')" :class="{selected: selectedCat === 'all'}">All</button>
+        </div>
+        <div class="" v-if="selectedCat === preview.cat || selectedCat === 'all'" v-for="preview in previews" :class="'preview ' + preview.cat">
+                <img :src="preview.url" class="max-w-sm" alt="">
+        </div> 
+
+      </div>
+      <script>
+        new Vue({
+  el: "#app",
+  data: {
+  	categories: [
+    	'cat1',
+      'cat2',
+      'cat3'
+    ],
+    previews: [
+    	{cat: 'cat1', url:'https://placehold.co/600x400'},
+      {cat: 'cat1', url:'https://placehold.co/600x400'},
+      {cat: 'cat1', url:'https://placehold.co/600x400'},
+      {cat: 'cat2', url:'https://placehold.co/600x400'},
+      {cat: 'cat2', url:'https://placehold.co/600x400'},
+      {cat: 'cat2', url:'https://placehold.co/600x400'},
+      {cat: 'cat2', url:'https://placehold.co/600x400'},
+      {cat: 'cat3', url:'https://placehold.co/600x400'},
+      {cat: 'cat3', url:'https://placehold.co/600x400'},
+    ],
+    selectedCat: 'all',
+  },
+  methods: {
+  	filter(selection) {
+    	this.selectedCat = selection;
+    }
+  },
+  mounted() {
+  	this.previews = _.shuffle(this.previews);
+  }
+})
+      </script>
+
+</body>
+</html>
