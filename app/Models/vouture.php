@@ -17,4 +17,16 @@ class vouture extends Model
     {
         return $this->hasMany(vouture_single::class, 'voutuer_id', 'id');
     }
+
+    public function showcustomtxt(){
+
+        if($this->id == 1){
+            $arr = [];
+            foreach ($this->vouture_single as $single) {
+                array_push($arr, $single->single_entity_vouture);
+            }
+            return $arr;
+        };
+        return [];
+    }
 }
