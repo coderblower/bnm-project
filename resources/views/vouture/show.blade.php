@@ -114,6 +114,7 @@
                           <div class="modal-body">
                              <form action="{{route('vou.store')}}" method="post">
                                 @csrf
+                                <input type="text" name="title">
                                 <input type="submit" value="Create Voutue">
                             </form>
                           </div>
@@ -124,7 +125,9 @@
                   </div>
                 </div>
               </div>
-
+              @error('title')
+                 <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
               
             </div>
           </div>

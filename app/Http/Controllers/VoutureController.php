@@ -35,7 +35,7 @@ class VoutureController extends Controller
     public function store(StorevoutureRequest $request)
     {
       //
-         vouture::create();
+         vouture::create($request->all());
 
         return redirect()->back()->with('message', 'some ');
     }

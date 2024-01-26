@@ -23,6 +23,7 @@ class StorevoutureRequest extends FormRequest
     {
         return [
             //
+            'title' => ['required', 'unique:voutures,title']
         ];
     }
 }

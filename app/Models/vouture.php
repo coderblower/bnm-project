@@ -11,7 +11,7 @@ class vouture extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id'];
+    protected $fillable = ['id','title'];
 
     public function vouture_single(): HasMany
     {
