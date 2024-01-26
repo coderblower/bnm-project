@@ -41,15 +41,48 @@
                 @foreach ($voutures as $v )
                         <tr>
                             <td>{{$v->id}}</td>
-                            @foreach ($v->showcustomtxt() as $x)
-                                <td>
-                                    {{$x}}
-                                </td>
-                            @endforeach
-                            <td>20/11/23</td>
-                            <td>500 tk</td>
-                        </tr>
+                            
+                            <td>
+                              <a href="{{route('vou.show', $v->id)}}">{{$v->vouture_no()}}</a>
+                            </td>
+                            <td>{{$v->created_at}}</td>
+                            <td> 
+                              {{$v->amount()}} taka
+                             </td>
+                             <td>
+                              
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete{{$v->id}}" >
+                               delete
+                              </button>
+                              <!-- Modal -->
+                              <div class="modal fade" id="delete{{$v->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                              </button>
+                                          </div>
+                                          <div class="modal-body">
+                                           
+                                          </div>
+                                          <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      <form action="{{route('vou.destroy', $v->id)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                               <input type="submit" class="btn btn-primary" value="delete"> 
+                                              {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+                                          </form>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                             </td>
 
+                        </tr>
+                    
                 @endforeach
 
                     </tbody>
@@ -59,7 +92,44 @@
         </div>
       </section>
 
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              {{-- create modal to add new vouture --}}
+              
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
+                Launch demo modal
+              </button>
+               <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                             <form action="{{route('vou.store')}}" method="post">
+                                @csrf
+                                <input type="submit" value="Create Voutue">
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
 
+              
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div>
     </div>

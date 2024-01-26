@@ -25,4 +25,5 @@ Route::get('/', function () {
 Route::view('/counter', 'app');
 
 
-Route::get('/vou', [VoutureController::class, 'index']);
+
+Route::resource('/vou', VoutureController::class);

@@ -18,15 +18,17 @@ class vouture extends Model
         return $this->hasMany(vouture_single::class, 'voutuer_id', 'id');
     }
 
-    public function showcustomtxt(){
+    public function amount(){
 
-        if($this->id == 1){
-            $arr = [];
+            $totalAmount = 0;  
             foreach ($this->vouture_single as $single) {
-                array_push($arr, $single->single_entity_vouture);
+                $totalAmount += $single->single_entity_vouture->sum('amount');
             }
-            return $arr;
-        };
-        return [];
+            return $totalAmount;
+    }
+
+    public function vouture_no(){
+        $result = $this->id > 9? '0': '00';
+        return $result.$this->id;
     }
 }

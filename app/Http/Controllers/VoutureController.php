@@ -7,6 +7,7 @@ use App\Http\Requests\StorevoutureRequest;
 use App\Http\Requests\UpdatevoutureRequest;
 use App\Models\vouture_single;
 
+
 class VoutureController extends Controller
 {
     /**
@@ -33,7 +34,10 @@ class VoutureController extends Controller
      */
     public function store(StorevoutureRequest $request)
     {
-        //
+      //
+         vouture::create();
+
+        return redirect()->back()->with('message', 'some ');
     }
 
     /**
@@ -63,8 +67,14 @@ class VoutureController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(vouture $vouture)
+    public function destroy($id)
     {
-        //
+        // dd($id);
+        $vou = vouture::find($id);
+
+        
+        $vou->delete();
+        return redirect()->back()->with('message','deleted ');
+
     }
 }
