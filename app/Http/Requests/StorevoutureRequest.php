@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Carbon\Carbon;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StorevoutureRequest extends FormRequest
@@ -23,7 +24,9 @@ class StorevoutureRequest extends FormRequest
     {
         return [
             //
-            'title' => ['required', 'unique:voutures,title']
+            'id' => ['required', 'unique:voutures,id'],
+            'vou_date'=> ['unique:voutures,vou_date']
+
         ];
     }
 }

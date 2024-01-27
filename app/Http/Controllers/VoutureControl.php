@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\vouture_single;
 use Illuminate\Http\Request;
-
 class VoutureControl extends Controller
 {
     /**

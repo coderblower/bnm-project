@@ -6,6 +6,9 @@ use App\Models\vouture;
 use App\Http\Requests\StorevoutureRequest;
 use App\Http\Requests\UpdatevoutureRequest;
 use App\Models\vouture_single;
+use Carbon\Carbon;
+
+use Illuminate\Http\Request;
 
 
 class VoutureController extends Controller
@@ -32,10 +35,24 @@ class VoutureController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorevoutureRequest $request)
+    public function store(Request $request)
     {
       //
-         vouture::create($request->all());
+        // $request->vou_date = Carbon::parse($request->vou_date);
+        // $request->vou_date = $request->vou_date->toDateString();
+        // // dd($request->vou_date);
+        //  vouture::create(['id'=>$request->id, 'vou_date'=>$request->vou_date]);
+
+        
+
+        $v = 'unique:voutures,vou_date';
+
+        // dd($request->all());
+ 
+        $this->validate($request, [
+            'id'=> 'required|unique:voutures,id',
+            'vou_date' =>      $v   ]);
+        vouture::create($request->all());
 
         return redirect()->back()->with('message', 'some ');
     }

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('voutures', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->date('vou_date')->unique();
             $table->timestamps();
         });
     }
