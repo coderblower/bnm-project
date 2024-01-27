@@ -35,7 +35,7 @@ class VoutureController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StorevoutureRequest $request)
     {
       //
         // $request->vou_date = Carbon::parse($request->vou_date);
@@ -43,15 +43,12 @@ class VoutureController extends Controller
         // // dd($request->vou_date);
         //  vouture::create(['id'=>$request->id, 'vou_date'=>$request->vou_date]);
 
-        
 
-        $v = 'unique:voutures,vou_date';
 
         // dd($request->all());
- 
-        $this->validate($request, [
-            'id'=> 'required|unique:voutures,id',
-            'vou_date' =>      $v   ]);
+
+        // dd($request->all());
+
         vouture::create($request->all());
 
         return redirect()->back()->with('message', 'some ');
@@ -89,7 +86,7 @@ class VoutureController extends Controller
         // dd($id);
         $vou = vouture::find($id);
 
-        
+
         $vou->delete();
         return redirect()->back()->with('message','deleted ');
 

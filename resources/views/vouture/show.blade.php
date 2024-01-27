@@ -6,7 +6,7 @@
 
         <title>{{ $title ?? 'Page Title' }}</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -49,16 +49,16 @@
                 @foreach ($voutures as $v )
                         <tr>
                             <td>{{$v->id}}</td>
-                            
+
                             <td>
                               <a href="{{route('vou.show', $v->id)}}">{{$v->vouture_no()}}</a>
                             </td>
                             <td>{{$v->vou_date}}</td>
-                            <td> 
+                            <td>
                               {{$v->amount()}} taka
                              </td>
                              <td>
-                              
+
                               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete{{$v->id}}" >
                                delete
                               </button>
@@ -73,14 +73,14 @@
                                               </button>
                                           </div>
                                           <div class="modal-body">
-                                           
+
                                           </div>
                                           <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                       <form action="{{route('vou.destroy', $v->id)}}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                               <input type="submit" class="btn btn-primary" value="delete"> 
+                                               <input type="submit" class="btn btn-primary" value="delete">
                                               {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
                                           </form>
                                       </div>
@@ -90,7 +90,7 @@
                              </td>
 
                         </tr>
-                    
+
                 @endforeach
 
                     </tbody>
@@ -105,7 +105,7 @@
           <div class="row">
             <div class="col-md-8">
               {{-- create modal to add new vouture --}}
-              
+
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
                 Launch demo modal
               </button>
@@ -123,7 +123,7 @@
                              <form action="{{route('vou.store')}}" method="post">
                                 @csrf
                                 <input type="number" name="id">
-                                <input id="" width="276" name="vou_date"/>
+                                <input id="datepicker" width="276" name="vou_date"/>
                                 <input type="submit" value="Create Voutue">
                             </form>
                           </div>
@@ -137,7 +137,7 @@
               @error('id')
                  <div class="alert alert-danger">{{ $message }}</div>
               @enderror
-              
+
               @error('vou_date')
                  <div class="alert alert-danger">{{ $message }}</div>
               @enderror
@@ -156,6 +156,6 @@
             uiLibrary: 'bootstrap4'
         });
     </script>
-        
+
     </body>
 </html>

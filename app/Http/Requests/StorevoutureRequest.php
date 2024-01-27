@@ -29,4 +29,12 @@ class StorevoutureRequest extends FormRequest
 
         ];
     }
+
+    protected function prepareForValidation()
+    {
+        // dd($this->vou_date);
+        $this->merge([
+            'vou_date' => Carbon::createFromFormat('m/d/Y', $this->vou_date)->toDateString('Y-m-d'),
+        ]);
+    }
 }

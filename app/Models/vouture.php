@@ -23,7 +23,7 @@ class vouture extends Model
 
     public function amount(){
 
-            $totalAmount = 0;  
+            $totalAmount = 0;
             foreach ($this->vouture_single as $single) {
                 $totalAmount += $single->single_entity_vouture->sum('amount');
             }
@@ -36,7 +36,8 @@ class vouture extends Model
     }
 
     public function setVouDateAttribute($value){
-        $this->attributes['vou_date'] = Carbon::createFromFormat('d/m/Y', $value);
-    } 
+
+        $this->attributes['vou_date'] = Carbon::createFromFormat('Y-m-d', $value);
+    }
 
 }
