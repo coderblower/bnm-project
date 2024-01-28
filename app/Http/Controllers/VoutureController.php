@@ -60,6 +60,7 @@ class VoutureController extends Controller
     public function show(vouture $vouture)
     {
         //
+        return view("vouture.single_vouture");
     }
 
     /**
