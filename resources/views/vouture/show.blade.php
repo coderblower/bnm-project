@@ -1,7 +1,7 @@
 
 @extends('master')
 
-@section('header') 
+@section('header')
       <header>
         <div class="container">
           <div class="row">
@@ -33,7 +33,9 @@
                     </thead>
                     <tbody>
 
-                @foreach ($voutures as $v )
+
+                        </x-alart>
+                    @foreach ($voutures as $v )
                         <tr>
                             <td>{{$v->id}}</td>
 
@@ -78,10 +80,11 @@
 
                         </tr>
 
-                @endforeach
+                        @endforeach
 
-                    </tbody>
-                </table>
+                            </tbody>
+                        </table>
+
 
             </div>
         </div>
