@@ -57,11 +57,12 @@ class VoutureController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(vouture $vouture)
+    public function show(Request $request, $id )
     {
-        //
-        $single = vouture_single::where('voutuer_id', 3);
-        return view("vouture.single_vouture", compact('single'));
+        
+        $single = vouture_single::where('voutuer_id', $id)->get();
+       
+        return view("vouture.single_vouture", compact('single', 'id'));
     }
 
     /**

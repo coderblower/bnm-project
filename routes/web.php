@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MainVouture;
+use App\Http\Controllers\SingleVouture;
 use App\Http\Controllers\VoutureController;
 use App\Livewire\Allproduct;
 use Illuminate\Support\Facades\Route;
@@ -27,3 +28,6 @@ Route::view('/counter', 'app');
 
 
 Route::resource('/vou', VoutureController::class);
+
+
+Route::resource('/single_vouture', SingleVouture::class);
