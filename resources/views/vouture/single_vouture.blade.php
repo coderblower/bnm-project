@@ -5,83 +5,82 @@
       <header>
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
-              <h2>
-                Total Expenses
-              </h2>
+            <div class="col-md-8">
+              <center><h2>
+                Single voutre
+              </h2></center>
             </div>
           </div>
         </div>
       </header>
 @stop
 
+@php
+
+$single_voutures = [
+    ['id'=>3, 'particulars'=> 'hello world', 'ammount'=>200],
+    ['id'=>4, 'particulars'=> 'hello world3', 'ammount'=>300],
+    ]
+
+@endphp
+
 
 @section('body')
-      <section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <center>
+                            <div class="info">
+                            <h6>date: 3/3/23</h6>
+                            <h6>Number of Vouture <span>2</span>  Total Amount on This Date <span>33 taka</span></h6>
+                        </div>
+                        </center>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+          <section>
         <div class="container">
           <div class="row">
             <div class="col-md-10">
+                <div><p>details of all  voutures on this date</p></div>
                 <table class="table">
                     <thead>
                         <tr>
-                        <th scope="col">sl</th>
-                        <th scope="col">Vouture No</th>
-                        <th scope="col">Date</th>
+                        <th scope="col">voture id</th>
+                        <th scope="col">particulars</th>
                         <th scope="col">Amount</th>
                         <th scope="col">control</th>
                         </tr>
                     </thead>
                     <tbody>
 
-                @foreach ($voutures as $v )
+                    @foreach ($single_voutures as $v )
                         <tr>
-                            <td>{{$v->id}}</td>
 
+
+                            <td>{{'0'.$v['id']}}</td>
                             <td>
-                              <a href="{{route('vou.show', $v->id)}}">{{$v->vouture_no()}}</a>
-                            </td>
-                            <td>{{$v->vou_date}}</td>
-                            <td>
-                              {{$v->amount()}} taka
+                              {{$v['particulars']}}
                              </td>
                              <td>
-
-                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete{{$v->id}}" >
-                               delete
-                              </button>
-                              <!-- Modal -->
-                              <div class="modal fade" id="delete{{$v->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                  <div class="modal-dialog" role="document">
-                                      <div class="modal-content">
-                                          <div class="modal-header">
-                                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                  <span aria-hidden="true">&times;</span>
-                                              </button>
-                                          </div>
-                                          <div class="modal-body">
-
-                                          </div>
-                                          <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                      <form action="{{route('vou.destroy', $v->id)}}" method="post">
-                                                @csrf
-                                                @method('DELETE')
-                                               <input type="submit" class="btn btn-primary" value="delete">
-                                              {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
-                                          </form>
-                                      </div>
-                                  </div>
-                                </div>
-                              </div>
+                              {{$v['ammount']}}
                              </td>
 
                         </tr>
 
-                @endforeach
 
-                    </tbody>
-                </table>
+                        @endforeach
+
+
+                            </tbody>
+                        </table>
+
 
             </div>
         </div>
@@ -134,10 +133,10 @@
       </section>
 
          <script>
-            $('#datepicker').datepicker({
-                uiLibrary: 'bootstrap4'
-            });
-        </script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
 
 @endsection
 
