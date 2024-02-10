@@ -1,23 +1,13 @@
-
 @extends('master')
 
+
 @section('header')
-      <header>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h2>
-                Total Expenses
-              </h2>
-            </div>
-          </div>
-        </div>
-      </header>
+    <h2>hello world</h2>
 @stop
 
 
 @section('body')
-      <section>
+     <section>
         <div class="container">
           <div class="row">
             <div class="col-md-10">
@@ -26,7 +16,7 @@
                         <tr>
                         <th scope="col">sl</th>
                         <th scope="col">Vouture No</th>
-                        <th scope="col">Date</th>
+                        <th scope="col">Particulars</th>
                         <th scope="col">Amount</th>
                         </tr>
                     </thead>
@@ -86,64 +76,4 @@
         </div>
       </section>
 
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-              {{-- create modal to add new vouture --}}
-
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
-                Launch demo modal
-              </button>
-               <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <div class="modal-body">
-                             <form action="{{route('vou.store')}}" method="post">
-                                @csrf
-                                <input type="number" name="id">
-                                <input id="datepicker" width="276" name="vou_date"/>
-                                <input type="submit" value="Create Voutue">
-                            </form>
-                          </div>
-                          <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                      </div>
-                  </div>
-                </div>
-              </div>
-              @error('id')
-                 <div class="alert alert-danger">{{ $message }}</div>
-              @enderror
-
-              @error('vou_date')
-                 <div class="alert alert-danger">{{ $message }}</div>
-              @enderror
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div>
-    </div>
-
-
-
-    <script>
-        $('#datepicker').datepicker({
-            uiLibrary: 'bootstrap4'
-        });
-    </script>
-
-@endsection
-
-
-
+@stop
