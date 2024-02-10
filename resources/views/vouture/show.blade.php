@@ -28,7 +28,6 @@
                         <th scope="col">Vouture No</th>
                         <th scope="col">Date</th>
                         <th scope="col">Amount</th>
-                        <th scope="col">control</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -133,11 +132,24 @@
         </div>
       </section>
 
+<<<<<<< HEAD
          <script>
             $('#datepicker').datepicker({
                 uiLibrary: 'bootstrap4'
             });
         </script>
+=======
+      <div>
+    </div>
+
+
+
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+>>>>>>> d6768463c9e5030066ca0c6fb8dd46575289c784
 
 @endsection
 
