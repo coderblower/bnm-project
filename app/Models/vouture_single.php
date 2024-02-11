@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class vouture_single extends Model
 {
     use HasFactory;
-    protected $fillable = [ 'reference_id','name','voutuer_id'];
+    protected $fillable = [ 'name','voutuer_id'];
 
     protected $primaryKey = 'reference_id';
 
