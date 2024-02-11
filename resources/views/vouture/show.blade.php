@@ -132,6 +132,13 @@
         </div>
       </section>
 
+<<<<<<< HEAD
+         <script>
+            $('#datepicker').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+        </script>
+=======
       <div>
     </div>
 
@@ -142,6 +149,7 @@
             uiLibrary: 'bootstrap4'
         });
     </script>
+>>>>>>> d6768463c9e5030066ca0c6fb8dd46575289c784
 
 @endsection
 

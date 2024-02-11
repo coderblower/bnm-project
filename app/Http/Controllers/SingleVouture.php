@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreSingleVoutureRequest;
 use App\Models\vouture_single;
 use Illuminate\Http\Request;
 
@@ -26,21 +27,20 @@ class SingleVouture extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, vouture_single $vouture_single)
+    public function store(StoreSingleVoutureRequest  $request, vouture_single $vouture_single)
     {
-        $vouture_single->create($request->all());
-        return back()->with("success","sdf");
-        
+        $vouture_single::create($request->all());
+
+        return back()->with('message', 'successfully saved in database');
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show( vouture_single $vouture_single,  string $id)
+    public function show(string $id)
     {
-        $single = $vouture_single->find($id);
-        dd($single);
-        return view('vouture.single_vou_onepage', compact('single'));
+        //
     }
 
     /**
@@ -62,10 +62,9 @@ class SingleVouture extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(vouture_single $vouture_single, string $id)
+    public function destroy(string $id, vouture_single $vouture_single)
     {
-        $vouture_single->destroy( $id );
-        return back()->with("success","");
-        //
+        $vouture_single->destroy($id);
+        return back()->with('success', 'deleted successfully');
     }
 }
