@@ -59,9 +59,9 @@ class VoutureController extends Controller
      */
     public function show(Request $request, $id )
     {
-        
+
         $single = vouture_single::where('voutuer_id', $id)->get();
-       
+
         return view("vouture.single_vouture", compact('single', 'id'));
     }
 

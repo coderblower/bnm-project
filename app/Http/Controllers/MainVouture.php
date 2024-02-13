@@ -9,11 +9,11 @@ class MainVouture extends Controller
 
 
 
-    class Hello{
+
         public function index(){
             var_dump("print len");
         }
-    }
+
 
 
     public function add(Request $request){
