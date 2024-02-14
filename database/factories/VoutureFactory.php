@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use DateTime;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +17,10 @@ class VoutureFactory extends Factory
      */
     public function definition(): array
     {
+        
         return [
             //
+            'vou_date'=> $this->faker->dateTime()->format('Y-m-d'),
         ];
     }
 }
