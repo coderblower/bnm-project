@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->timestamps();
             $table->bigInteger('voutuer_id');
+            $table->bigInteger('vouture_no');
         });
     }
 

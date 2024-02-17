@@ -85,13 +85,18 @@
                         </tr>
 
                 @endforeach
+                        
 
                     </tbody>
                 </table>
-
+               
             </div>
+             <div class="col-md-5 mx-auto">
+                  {{$voutures->links()}}
+                </div>
         </div>
       </section>
+     
 
       <section>
         <div class="container">

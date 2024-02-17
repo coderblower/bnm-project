@@ -18,7 +18,8 @@ class VoutureController extends Controller
      */
     public function index()
     {
-        $voutures = vouture::all();
+        
+        $voutures = vouture::paginate(2);
         $single_voutures = vouture_single::all();
         return view("vouture.show", compact("voutures","single_voutures"));
         //

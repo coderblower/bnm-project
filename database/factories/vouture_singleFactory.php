@@ -2,13 +2,12 @@
 
 namespace Database\Factories;
 
-use DateTime;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\vouture>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\vouture_single>
  */
-class VoutureFactory extends Factory
+class vouture_singleFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +16,9 @@ class VoutureFactory extends Factory
      */
     public function definition(): array
     {
-        
         return [
-            //
-            'vou_date'=> $this->faker->dateTime()->format('Y-m-d'),
+           'voutuer_id' => $this->faker->numberBetween(0,10),
+           
         ];
     }
 }
