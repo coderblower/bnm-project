@@ -31,3 +31,5 @@ Route::resource('/vou', VoutureController::class);
 
 
 Route::resource('/single_vouture', SingleVouture::class);
+
+Route::view('live', Allproduct::class);

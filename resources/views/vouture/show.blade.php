@@ -10,6 +10,13 @@
                 Total Expenses
               </h2>
             </div>
+            <div class="col-md-6">
+                <nav>
+                    <ul>
+                        <li><a href="{{route('vou.index')}}">Vouture</a></li>
+                    </ul>
+                </nav>
+            </div>
           </div>
         </div>
       </header>
@@ -137,11 +144,7 @@
 
 
 
-    <script>
-        $('#datepicker').datepicker({
-            uiLibrary: 'bootstrap4'
-        });
-    </script>
+
 
 @endsection
 
