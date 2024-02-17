@@ -11,6 +11,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-10">
+                @if($single->count())
                 <table class="table">
                     <thead>
                         <tr>
@@ -23,6 +24,9 @@
                     </thead>
                     <tbody>
 
+
+                        
+                     <div>fu</div>
                 @foreach ($single as $v )
                         <tr>
                             <td>
@@ -32,8 +36,11 @@
                             <td>
                                 {{$v->vouture_no}}
                             </td>
+                            
 
                             <td> {{$v->name}} </td>
+
+                            
 
                             <td> {{$v->amount()}} taka </td>
 
@@ -70,7 +77,7 @@
                         </tr>
 
                 @endforeach
-
+                        @endif
 
 
 

@@ -62,8 +62,16 @@ class VoutureController extends Controller
     {
 
         $single = vouture_single::where('voutuer_id', $id)->get();
+        $vouture = vouture::find($id);
+        
 
-        return view("vouture.single_vouture", compact('single', 'id'));
+       if( $vouture){
+         return view("vouture.single_vouture", compact('single', 'id'));
+       } 
+       
+       abort(404);
+
+       
     }
 
     /**
