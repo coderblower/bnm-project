@@ -14,7 +14,7 @@ class vouture extends Model
 
 
 
-    protected $fillable = ['id', 'vou_date'];
+    protected $fillable = ['vou_date'];
 
     public function vouture_single(): HasMany
     {

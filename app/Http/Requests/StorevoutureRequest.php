@@ -24,7 +24,7 @@ class StorevoutureRequest extends FormRequest
     {
         return [
             //
-            'id' => ['required', 'unique:voutures,id'],
+            // 'id' => ['required', 'unique:voutures,id'],
             'vou_date'=> ['unique:voutures,vou_date']
 
         ];
